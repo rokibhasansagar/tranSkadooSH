@@ -15,8 +15,9 @@ BRANCH=$3
 GitHubMail=$4
 GitHubName=$5
 
-MegaUserMail=$6
-MegaPass=$7
+FTPHost=$6
+FTPUser=$7
+FTPPass=$8
 
 # Colors
 CL_XOS="\033[34;1m"
@@ -31,7 +32,7 @@ CL_CYN="\033[36m"
 CL_RST="\033[0m"
 
 # Necessary Application Installation
-sudo apt-get update -y && sudo apt-get install git repo pxz megatools -y
+sudo apt-get update -y && sudo apt-get install git repo pxz wput -y
  
 # Github Authorization
 git config --global user.email $GitHubMail
@@ -69,7 +70,7 @@ doSync(){
     echo -e $CL_RED" SHALLOW Source Sorting "$CL_RST
 
     sortSyncedParts
-    megaUpload
+    Upload2FTP
 
     cd $DIR/$ROMNAME
 
@@ -90,33 +91,29 @@ sortSyncedParts(){
 
     cd $DIR/$ROMNAME
     rm -rf upload
-    mkdir -p upload/$ROMNAME/$BRANCH/repo
+    mkdir -p upload/$ROMNAME/$BRANCH
 
-    mv $SHALLOW upload/$ROMNAME/$BRANCH/repo
+    mv $SHALLOW upload/$ROMNAME/$BRANCH
 
     echo -e $CL_PFX" Done sorting "$CL_RST
 
     # Md5s
     echo -e $CL_PFX" Taking md5sums "$CL_RST
 
-    cd $DIR/$ROMNAME/upload/$ROMNAME/$BRANCH/repo
+    cd $DIR/$ROMNAME/upload/$ROMNAME/$BRANCH
     md5sum * > $ROMNAME-$BRANCH-repo-$(date +%Y%m%d).parts.md5sum
 
 }
 
-megaUpload(){
+Upload2FTP(){
 
     echo -e $CL_XOS" Begin to upload "$CL_RST
 
     cd $DIR/$ROMNAME/upload
     
-    # Make Directories in MEGA
-    megamkdir /Root/$ROMNAME --username=$MegaUserMail --password=$MegaPass
-    megamkdir /Root/$ROMNAME/$BRANCH --username=$MegaUserMail --password=$MegaPass
-    
     # Upload
-    SHALLOWUP="$ROMNAME/$BRANCH/repo/$ROMNAME-$BRANCH-repo-$(date +%Y%m%d).*"
-    megaput $SHALLOWUP --path=/Root/$ROMNAME/$BRANCH --username=$MegaUserMail --password=$MegaPass
+    SHALLOWUP="$ROMNAME/$BRANCH/$ROMNAME-$BRANCH-repo-$(date +%Y%m%d).*"
+	wput -nv $SHALLOWUP ftp://"$FTPUser":"$FTPPass"@"$FTPHost"/
 
     echo -e $CL_XOS" Done uploading "$CL_RST
 
