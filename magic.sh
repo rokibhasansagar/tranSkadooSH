@@ -60,7 +60,7 @@ doSync(){
     rm -rf shallow
 	
     # Compress .repo folder
-	mkdir repoparts
+    mkdir repoparts
     export XZ_OPT=-9
     time tar -I pxz -cf - $ROMNAME-$BRANCH-repo-$(date +%Y%m%d)/ | split -b 700M - repoparts/$ROMNAME-$BRANCH-repo-$(date +%Y%m%d).tar.xz.
     SHALLOW="repoparts/$ROMNAME-$BRANCH-repo-$(date +%Y%m%d).tar.xz.*"
@@ -113,7 +113,7 @@ Upload2FTP(){
     
     # Upload
     SHALLOWUP="$ROMNAME/$BRANCH/$ROMNAME-$BRANCH-repo-$(date +%Y%m%d).*"
-	wput -nv $SHALLOWUP ftp://"$FTPUser":"$FTPPass"@"$FTPHost"/
+    wput -nv $SHALLOWUP ftp://"$FTPUser":"$FTPPass"@"$FTPHost"/
 
     echo -e $CL_XOS" Done uploading "$CL_RST
 
