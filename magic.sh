@@ -6,20 +6,17 @@
 # Modified by - Rokib Hasan Sagar @rokibhasansagar
 # -----------------------------------------------------
 
-# Get SHELL Environment
-sudo -s
-
 # Definitions
 DIR=$(pwd)
 ROMNAME=$1
 LINK=$2
 BRANCH=$3
 
-GITMAIL=$4
-GITNAME=$5
+GitHubMail=$4
+GitHubName=$5
 
-MEGAUSER=$6
-MEGAPASS=$7
+MegaUserMail=$6
+MegaPass=$7
 
 # Colors
 CL_XOS="\033[34;1m"
@@ -34,17 +31,17 @@ CL_CYN="\033[36m"
 CL_RST="\033[0m"
 
 # Necessary Application Installation
-apt-get update -y && apt-get install git repo pxz megatools -y
+sudo apt-get update -y && sudo apt-get install git repo pxz megatools -y
  
 # Github Authorization
-git config --global user.email $GITMAIL
-git config --global user.name $GITNAME
+git config --global user.email $GitHubMail
+git config --global user.name $GitHubName
 
 # Main Function
 doSync(){
     cd $DIR; mkdir -p $ROMNAME/shallow; cd $ROMNAME/shallow
 
-    repo init -u $LINK -b $BRANCH --depth 1
+    repo init -q -u $LINK -b $BRANCH --depth 1
 
     # Sync it up!
     time repo sync -c -f -q --force-sync --no-clone-bundle --no-tags -j32
@@ -64,7 +61,7 @@ doSync(){
     # Compress .repo folder
 	mkdir repoparts
     export XZ_OPT=-9
-    time tar -I pxz -cvf - $ROMNAME-$BRANCH-repo-$(date +%Y%m%d)/ | split -b 700M - repoparts/$ROMNAME-$BRANCH-repo-$(date +%Y%m%d).tar.xz.
+    time tar -I pxz -cf - $ROMNAME-$BRANCH-repo-$(date +%Y%m%d)/ | split -b 700M - repoparts/$ROMNAME-$BRANCH-repo-$(date +%Y%m%d).tar.xz.
     SHALLOW="repoparts/$ROMNAME-$BRANCH-repo-$(date +%Y%m%d).tar.xz.*"
 
     echo -e $CL_RED" SHALLOW Source  .. - ..  Compression Done "$CL_RST
@@ -114,12 +111,12 @@ megaUpload(){
     cd $DIR/$ROMNAME/upload
     
     # Make Directories in MEGA
-    megamkdir /Root/$ROMNAME --username=$MEGAUSER --password=$MEGAPASS
-    megamkdir /Root/$ROMNAME/$BRANCH --username=$MEGAUSER --password=$MEGAPASS
+    megamkdir /Root/$ROMNAME --username=$MegaUserMail --password=$MegaPass
+    megamkdir /Root/$ROMNAME/$BRANCH --username=$MegaUserMail --password=$MegaPass
     
     # Upload
     SHALLOWUP="$ROMNAME/$BRANCH/repo/$ROMNAME-$BRANCH-repo-$(date +%Y%m%d).*"
-    megaput $SHALLOWUP --path=/Root/$ROMNAME/$BRANCH --username=$MEGAUSER --password=$MEGAPASS
+    megaput $SHALLOWUP --path=/Root/$ROMNAME/$BRANCH --username=$MegaUserMail --password=$MegaPass
 
     echo -e $CL_XOS" Done uploading "$CL_RST
 
