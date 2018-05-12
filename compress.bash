@@ -27,11 +27,12 @@ branch=nougat
 GitHubMail=johndoe@email.domain
 GitHubName=johncena
 
-### MEGA.NZ Authorization ###
-# Input your mega.nz username and password
-MegaUserMail=john.cena@email.domain
-MegaPass=s3cr3tw0rdz
+### Your FTP Server / AFH Account Details ###
+# Specify your server address/ip, username & password
+FTPHost=uploads.androidfilehost.com
+FTPUser=johndoe
+FTPPass=s3cr3tw0rdz
 
 ### Finally, execute the stuff. ###
 # Do Not Touch The Following Line
-/bin/bash ./magic.sh $name $manifest $branch $GitHubMail $GitHubName $MegaUserMail $MegaPass
+/bin/bash ./magic.sh $name $manifest $branch $GitHubMail $GitHubName $FTPHost $FTPUser $FTPPass
