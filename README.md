@@ -15,3 +15,4 @@ IMPORTANT: Edit "compress.bash" and Replace some elements.
 5. Go to line #32, #33 & #34. After 'FTPHost=', 'FTPUser=' & 'FTPPass=', Enter your FTP server account information without any spaces.
 
 ### Now run `./compress.bash` from within the directory
+PS: Don't forget to `chmod +x compress.bash magic.sh` at first then run the script
