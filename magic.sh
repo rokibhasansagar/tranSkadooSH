@@ -119,7 +119,7 @@ Upload2FTP(){
     
     # Upload
     SHALLOWUP="$ROMNAME/$BRANCH/$ROMNAME-$BRANCH-repo-$(date +%Y%m%d).*"
-    wput -nv $SHALLOWUP ftp://"$FTPUser":"$FTPPass"@"$FTPHost"/
+    wput $SHALLOWUP ftp://"$FTPUser":"$FTPPass"@"$FTPHost"/
 
     echo -e $CL_XOS" Done uploading "$CL_RST
 
