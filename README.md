@@ -16,3 +16,8 @@ IMPORTANT: Edit "compress.bash" and Replace some elements.
 
 ### Now run `./compress.bash` from within the directory
 PS: Don't forget to `chmod +x compress.bash magic.sh` at first then run the script
+
+## My uploaded repos
+Download from Here: https://androidfilehost.com/?w=files&flid=270268
+
+_Work in progress_
