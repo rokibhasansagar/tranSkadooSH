@@ -12,15 +12,15 @@
 ### Manifest Configuration ###
 # Name of the ROM. No Spaces Please.
 # Example: CyanogenMod, SlimRoms, AOSP, TWRP
-name=ResurrectionRemix
+name=LineageOS
 
 # Manifest link. https:// is mandatory.
 # Example: https://github.com/cyanogenmod/android
-manifest=https://github.com/ResurrectionRemix/platform_manifest.git
+manifest=https://github.com/LineageOS/android.git
 
 # Manifest branch.
 # Example: cm-14.0, nougat, Lineage-15.1
-branch=nougat
+branch=cm-13.0
 
 ### User Autentication ###
 # Specify here your GitHub Info
