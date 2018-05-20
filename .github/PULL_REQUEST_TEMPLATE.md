@@ -1,7 +1,3 @@
----
-name: New Android ROM Source request
-about: Pull request for a new source to compress
----
 
 🚨 Before you submit a pull request, please make sure you have done these:
 
@@ -12,6 +8,7 @@ To request a new source:
 
 - [x] Edit and put information in only line #15, #19 & #23 as described in `README.md`
 
-Edit the Title of the Request as the ROM Name and Pull.
+Edit the Title of this Request as the ROM Name and __Delete__ every other lines I've written here.
+You can add some description here too, but it's not mandatory.
 
 💔 Thank you!
