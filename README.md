@@ -1,7 +1,6 @@
 # tranSkadooSH
 ### Transload Shallow Android Sources Into FTP/AFH Just like Skadoosh.
-Reborn from regalstreak's project skadoosh 😏
-http://forum.xda-developers.com/android/software/sources-android-sources-highly-t3231109
+Reborn from [regalstreak's project skadoosh](http://forum.xda-developers.com/android/software/sources-android-sources-highly-t3231109) 😏
 
 **Warning:** 🚨 Do not upload your own username & password along with this repo if you modify the project!
 
