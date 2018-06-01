@@ -38,11 +38,12 @@ curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
 chmod a+x ~/bin/repo
 
 # Necessary Application Installation
-sudo apt-get update -y && sudo apt-get install git pxz wput -y
+sudo apt-get -qq update -y && sudo apt-get -qq install git pxz wput -y
  
 # Github Authorization
 git config --global user.email $GitHubMail
 git config --global user.name $GitHubName
+git config --global color.ui true
 
 # Main Function
 doSync(){
