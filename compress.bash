@@ -20,7 +20,7 @@ manifest=https://github.com/LineageOS/android.git
 
 # Manifest branch.
 # Example: cm-14.0, nougat, Lineage-15.1
-branch=cm-13.0
+branch=Lineage-15.1
 
 ### User Autentication ###
 # Specify here your GitHub Info
