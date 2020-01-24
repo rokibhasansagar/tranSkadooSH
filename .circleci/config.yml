@@ -1,0 +1,30 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: fr3akyphantom/skadoosh:latest
+    working_directory: /home/alpine/projects/
+    steps:
+      - checkout
+      - run:
+          name: Create Persistent act-shell
+          command: |
+            cat << EOF > /tmp/act.sh
+            #!/bin/bash
+            while true; do
+              echo -en "Current Date-Time is --- " && date "+%D - %H:%M:%S"
+              sleep 480
+            done
+            EOF
+      - run:
+          name: Access Permission
+          command: chmod +x ./magic.sh ./compress.bash /tmp/act.sh
+      - run:
+          name: Fire-Up the Program
+          command: echo "Running..."; /tmp/act.sh & ./compress.bash
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build:
+          context: personal-envs

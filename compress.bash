@@ -1,38 +1,36 @@
 #!/bin/bash
 
-# Authors - Neil "regalstreak" Agarwal, Harsh "MSF Jarvis" Shandilya, Tarang "DigiGoon" Kagathara
-# 2016, 2017
-# This file is used to run skadoo.sh easily.
-# --------------------------------------------------------------------
-# Now modified to compress only Shallow sources and upload to Mega
-# --------------------------------------------------------------------
-# By Rokib Hasan Sagar
-# ------------------------
+# Original Authors of "skadoosh" ---
+# Neil "regalstreak" Agarwal,
+# Harsh "MSF Jarvis" Shandilya,
+# Tarang "DigiGoon" Kagathara
+# Copyright © 2017
+# -----------------------------------------------------
+# Modified by - Rokib Hasan Sagar @rokibhasansagar
+# =====================================================
 
 ### Manifest Configuration ###
-# Name of the ROM. No Spaces Please.
+
+# Name of the ROM, without any Spaces.
 # Example: CyanogenMod, SlimRoms, AOSP, TWRP
-name=LineageOS
+name=""
 
 # Manifest link. https:// is mandatory.
 # Example: https://github.com/cyanogenmod/android
-manifest=https://github.com/LineageOS/android.git
+manifest=""
 
 # Manifest branch.
 # Example: cm-14.0, nougat, Lineage-15.1
-branch=cm-13.0
-
-### User Autentication ###
-# Specify here your GitHub Info
-GitHubMail=johndoe@email.domain
-GitHubName=johncena
-
-### Your FTP Server / AFH Account Details ###
-# Specify your server address/ip, username & password
-FTPHost=uploads.androidfilehost.com
-FTPUser=johndoe
-FTPPass=s3cr3tw0rdz
+branch=""
 
 ### Finally, execute the stuff. ###
 # Do Not Touch The Following Line
-/bin/bash ./magic.sh $name $manifest $branch $GitHubMail $GitHubName $FTPHost $FTPUser $FTPPass
+
+check_envs() {
+  [[ -z $name ]] && echo -e '\033[31m'"ROM Short Name is Empty, \nCan't Work. Exiting..."'\033[0m' && exit 1
+  [[ -z $manifest ]] && echo -e '\033[31m'"ROM Manifest URL is Empty, \nCan't Work. Exiting..."'\033[0m' && exit 1
+  [[ -z $branch ]] && echo -e '\033[31m'"Android Branch Name is Empty, \nCan't Work. Exiting..."'\033[0m' && exit 1
+}
+
+check_envs
+/bin/bash ./magic.sh $name $manifest $branch
