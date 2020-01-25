@@ -11,9 +11,9 @@
 
 ### Definitions need to be parsed from compress.bash file ---
 
-name= "$1"
-manifest= "$2"
-branch= "$3"
+name=$1
+manifest=$2
+branch=$3
 
 # Colors
 CL_XOS="\033[34;1m"
