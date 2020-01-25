@@ -11,12 +11,12 @@
 
 ### Manifest Configuration ###
 
-# Name of the ROM, without any Spaces.
-# Example: CyanogenMod, SlimRoms, AOSP, TWRP
+# Name of the ROM, (The Git Org Name) without any Spaces.
+# Example: CyanogenMod, SlimRoms, AOSP, ResurrectionRemix, TWRP
 name=""
 
 # Manifest link. https:// is mandatory.
-# Example: https://github.com/cyanogenmod/android
+# Example: https://github.com/cyanogenmod/android.git
 manifest=""
 
 # Manifest branch.
@@ -27,9 +27,9 @@ branch=""
 # Do Not Touch The Following Line
 
 check_envs() {
-  [[ -z $name ]] && echo -e '\033[31m'"ROM Short Name is Empty, \nCan't Work. Exiting..."'\033[0m' && exit 1
-  [[ -z $manifest ]] && echo -e '\033[31m'"ROM Manifest URL is Empty, \nCan't Work. Exiting..."'\033[0m' && exit 1
-  [[ -z $branch ]] && echo -e '\033[31m'"Android Branch Name is Empty, \nCan't Work. Exiting..."'\033[0m' && exit 1
+  [[ -z $name ]] && ( echo -e '\033[31m'"ERROR! ROM Short Name is Empty."'\033[0m' && exit 1 )
+  [[ -z $manifest ]] && ( echo -e '\033[31m'"ERROR! ROM Manifest URL is Empty."'\033[0m' && exit 1 )
+  [[ -z $branch ]] && ( echo -e '\033[31m'"ERROR! Android Branch Name is Empty."'\033[0m' && exit 1 )
 }
 
 check_envs
