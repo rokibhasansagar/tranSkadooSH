@@ -7,7 +7,7 @@
 Reborn from [regalstreak's project skadoosh](http://forum.xda-developers.com/android/software/sources-android-sources-highly-t3231109) 😏
 
 ## How to add Pull Request:
-First, Look for your Desired Sources from the [__My Uploads__](###my-uploads) Section.
+First, Look for your Desired Sources from the [__My Uploads__](#my-uploads) Section.
 
 If you want me to add more sources and upload them for you, make sure you do the followings:
 
@@ -26,11 +26,11 @@ That's all. 💖
 ---
 
 ### My Uploads
-FRESH NEW SOURCES: https://sourceforge.net/projects/tranSKadooSH/files/
+💝 _FRESH NEW SOURCES:_ https://sourceforge.net/projects/tranSKadooSH/files/
 
 These Files are Continuously uploading into Server. Keep an eye on this.
 
-_Old Files. You May Download from Here:_ https://androidfilehost.com/?w=files&flid=270268
+👴 _Old Files. You May Download from Here:_ https://androidfilehost.com/?w=files&flid=270268
 
 ---
 
@@ -60,11 +60,12 @@ If you do not want to use data at all, you can use below command, which will not
 ```bash
  repo sync -c -q --force-sync --no-clone-bundle --optimized-fetch --prune --no-tags -j16 --local-only
 ```
-  Happy Coding! 🤗
+
+Happy Coding! 🤗
 
 ---
 
-This is still _Work in progress_
+🚧 This is still _Work in progress_
 
 And files are being Uploaded using free account from _CircleCI_.
 So, only a few variant of ROMs can be uploaded in a week.
