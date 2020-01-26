@@ -40,7 +40,7 @@ datetime=$(date +%Y%m%d)
 
 # Push Info into Bot's PM
 telegram -t $TG_BotToken -c $TG_Bot_PM -M "Repo Transloading Initialized 
-of $name for "$branch" Branch 
+for $name with "$branch" Branch 
 at $(date '+%D - %H:%M:%S')
 [.](https://i.imgur.com/OpyoWU7.jpg)"
 
@@ -99,7 +99,9 @@ Checked-out File List is coming below - "
 
 move_repo() {
   cd $DIR
+  Repo_Size=$(du -sh tranSKadooSH/.repo | cut -f1)
   mv tranSKadooSH/.repo transload/
+  Checkout_Size=$(du -sh tranSKadooSH | cut -f1)
 }
 
 clean_checkout() {
@@ -112,13 +114,13 @@ compress_shallow() {
   cd $DIR/transload/
   
   # Push Info into Bot's PM
-  telegram -t $TG_BotToken -c $TG_Bot_PM -M "Compression Started: [See Progress]($CIRCLE_BUILD_URL)"
+  telegram -t $TG_BotToken -c $TG_Bot_PM -M "Compression of $Repo_Size Started: [See Progress]($CIRCLE_BUILD_URL)"
   
   echo -e "\n"  $CL_BLU"Source Compressing in parts, This will take some time" $CL_RST
   tar -cJf - .repo | split -b 1280M - ../$name/$branch/$name-$branch-repo-$datetime.tar.xz.
   
   # Push Info into Bot's PM
-  telegram -t $TG_BotToken -c $TG_Bot_PM -M "Compressing and Spliting into Parts Done at $(date '+%D - %H:%M:%S')"
+  telegram -t $TG_BotToken -c $TG_Bot_PM -M "Compression into Multiple Parts are Done at $(date '+%D - %H:%M:%S')"
   
   cd $DIR/$name/$branch/
   echo -e "\n" $CL_PFX "Taking md5sums" $CL_RST
@@ -136,23 +138,30 @@ release_payload() {
 
   echo -e "\n" $CL_GRN "Done uploading" $CL_RST
   
-  # Push an image to great users, in a way
-  curl -sL https://i.imgur.com/v8DOuqut.gif --output /tmp/greet.gif
-  telegram -t $TG_BotToken -c $TG_Channel -i "/tmp/greet.gif"
   # Push Info into tranSKadooSH Channel
   telegram -t $TG_BotToken -c $TG_Channel -M "
-Hello Developers!
-Compressed Repo Sourcecode of $name for "$branch" Branch is available now!
+Hello Fellow Developers!
+
+The core `.repo` Folder of $name for "$branch" Branch, in Compressed `.tar.xz` format, is Available Now!
 You can unpack and checkout files from that to begin ROM Building easily.
+[.](https://i.imgur.com/v8DOuqu.gif)"
+  # Push Links and Total Size Counts into Channel
+  telegram -t $TG_BotToken -c $TG_Channel -M "
+The total size of checked-out files will be $Checkout_Size.
+But you have to Download only about $Repo_Size of Data.
 
-Download the compressed multi-part .repo folder from [Sourceforge Server](https://sourceforge.net/projects/transkadoosh/files/$name/$branch)
+Download the compressed multi-part `.repo` folder from [Sourceforge Server](https://sourceforge.net/projects/transkadoosh/files/$name/$branch)
 
-Good Luck Building Custom Rom from $name."
+Good Luck Building Custom Rom from $name.
+"
 
   echo -e "\n" $CL_BLU "Go to https://sourceforge.net/projects/transkadoosh/files/$name/$branch for the Files" $CL_RST
   
   # Push Info into Bot's PM
   telegram -t $TG_BotToken -c $TG_Bot_PM -D -M "Multipart Compressed Repo Sourcecode for $name is Successfully Uploaded.
+The total size of checked-out files will be $Checkout_Size.
+But the `.repo` folder has only about $Repo_Size of Data.
+
 Go to [Sourceforge Server](https://sourceforge.net/projects/transkadoosh/files/$name/$branch) to get the files."
 }
 
