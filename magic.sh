@@ -32,8 +32,8 @@ DIR=$(pwd)
 echo -en "\n" $CL_XOS "Current directory is - " && echo -e $DIR $CL_RST "\n"
 
 # Set telegram token and Chat ID
-TELEGRAM_TOKEN=$TG_BotToken
-TELEGRAM_CHAT=$ChannelName
+TOKEN=$TG_BotToken
+CHAT_ID=$ChannelName
 
 mkdir -p {tranSKadooSH,transload}
 mkdir -p $name/$branch
