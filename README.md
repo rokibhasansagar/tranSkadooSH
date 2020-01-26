@@ -63,9 +63,12 @@ If you do not want to use data at all, you can use below command, which will not
 
 Happy Coding! 🤗
 
+### Subscribe
+Join my Telegram Channel for Instant Update of All Old & New Uploaded ROM Sources at [@tranSKadooSH](https://t.me/tranSKadooSH)
+
 ---
 
-🚧 This is still _Work in progress_
+🚧 This is still _Work in progress_ 🚧
 
 And files are being Uploaded using free account from _CircleCI_.
 So, only a few variant of ROMs can be uploaded in a week.
