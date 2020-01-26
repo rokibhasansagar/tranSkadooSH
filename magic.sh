@@ -112,7 +112,7 @@ compress_shallow() {
   cd $DIR/transload/
   
   # Push Info into Bot's PM
-  telegram -t $TG_BotToken -c $TG_Bot_PM -M "Compression Started: [See Progress](buttonurl:$(echo $CIRCLE_BUILD_URL))"
+  telegram -t $TG_BotToken -c $TG_Bot_PM -M "Compression Started: [See Progress]($CIRCLE_BUILD_URL)"
   
   echo -e "\n"  $CL_BLU"Source Compressing in parts, This will take some time" $CL_RST
   tar -cJf - .repo | split -b 1280M - ../$name/$branch/$name-$branch-repo-$datetime.tar.xz.
