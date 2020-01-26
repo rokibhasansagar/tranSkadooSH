@@ -21,7 +21,7 @@ manifest="https://android.googlesource.com/platform/manifest.git"
 
 # Manifest branch.
 # Example: cm-14.0, nougat, Lineage-15.1
-branch="android-7.1.2_r36"
+branch="android-8.1.0_r65"
 
 ### Finally, execute the stuff. ###
 # Do Not Touch The Following Line
