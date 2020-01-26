@@ -31,12 +31,21 @@ CL_RST="\033[0m"
 DIR=$(pwd)
 echo -en "\n" $CL_XOS "Current directory is - " && echo -e $DIR $CL_RST "\n"
 
+# Set telegram token and Chat ID
+TELEGRAM_TOKEN=$TG_BotToken
+TELEGRAM_CHAT=$ChannelName
+
 mkdir -p {tranSKadooSH,transload}
 mkdir -p $name/$branch
 
 cd tranSKadooSH
 
 datetime=$(date +%Y%m%d)
+
+# Current CI URL
+CI_URL=$CIRCLE_BUILD_URL
+# Release URL
+REL_URL=https://sourceforge.net/projects/transkadoosh/files/$name/$branch
 
 google_cookies() {
   echo -en "\n" $CL_INS "Setup Google Cookies for Smooth googlesource Cloning" $CL_RST
@@ -74,11 +83,20 @@ repo_sync_shallow() {
 
   CPU_COUNT=$(grep -c ^processor /proc/cpuinfo)
   THREAD_COUNT_SYNC=$(($CPU_COUNT * 8))
+  
+  telegram -M "Hello tranSKadooSH-ers,
+I Bring You Great News of New Transload.
+
+Repo Sync Initialized for [$name]($manifest) for Branch $branch at $(date '+%D - %H:%M:%S')"
 
   echo -e "\n" $CL_YLW "Syncing it up! Wait for a few minutes..." $CL_RST
   repo sync -c -q --force-sync --no-clone-bundle --optimized-fetch --prune --no-tags -j$THREAD_COUNT_SYNC
 
   echo -e "\n" $CL_MAG "SHALLOW Source Syncing done" $CL_RST
+  
+  telegram -M "Sync Completed Successfully at $(date '+%D - %H:%M:%S')
+
+Compression Started: [See Progress]($CI_URL)"
 
   echo -e "\n" $CL_BLU "All Checked-out Folder/Files are Here -" $CL_RST
   ls -la .
@@ -115,7 +133,13 @@ release_payload() {
   rsync -arvPz --rsh="sshpass -p $SFPass ssh -l $SFUser" $name/ $SFUser@shell.sourceforge.net:/home/frs/project/$SFProject/$name/  
 
   echo -e "\n" $CL_GRN "Done uploading" $CL_RST
-  echo -e "\n" $CL_BLU "Go to 'https://sourceforge.net/projects/transkadoosh/files/$name/' for the Files" $CL_RST
+  
+  telegram -M "Compression & Upoad Successfully Done at $(date '+%D - %H:%M:%S')
+
+Download the compressed multi-part .repo folder for $name with branch $branch
+[Sourceforge Download Links](buttonurl:$REL_URL)"
+
+  echo -e "\n" $CL_BLU "Go to $REL_URL for the Files" $CL_RST
 }
 
 clean_all() {
