@@ -31,10 +31,6 @@ CL_RST="\033[0m"
 DIR=$(pwd)
 echo -en "\n" $CL_XOS "Current directory is - " && echo -e $DIR $CL_RST "\n"
 
-# Set telegram token and Chat ID
-TOKEN=$TG_BotToken
-CHAT_ID=$ChannelName
-
 mkdir -p {tranSKadooSH,transload}
 mkdir -p $name/$branch
 
@@ -84,7 +80,7 @@ repo_sync_shallow() {
   CPU_COUNT=$(grep -c ^processor /proc/cpuinfo)
   THREAD_COUNT_SYNC=$(($CPU_COUNT * 8))
   
-  telegram -M "Hello tranSKadooSH-ers,
+  telegram -t $TG_BotToken -c $TG_Channel -M "Hello tranSKadooSH-ers,
 I Bring You Great News of New Transload.
 
 Repo Sync Initialized for [$name]($manifest) for Branch $branch at $(date '+%D - %H:%M:%S')"
@@ -94,7 +90,7 @@ Repo Sync Initialized for [$name]($manifest) for Branch $branch at $(date '+%D -
 
   echo -e "\n" $CL_MAG "SHALLOW Source Syncing done" $CL_RST
   
-  telegram -M "Sync Completed Successfully at $(date '+%D - %H:%M:%S')
+  telegram -t $TG_BotToken -c $TG_Channel -M "Sync Completed Successfully at $(date '+%D - %H:%M:%S')
 
 Compression Started: [See Progress]($CI_URL)"
 
@@ -134,7 +130,7 @@ release_payload() {
 
   echo -e "\n" $CL_GRN "Done uploading" $CL_RST
   
-  telegram -M "Compression & Upoad Successfully Done at $(date '+%D - %H:%M:%S')
+  telegram -t $TG_BotToken -c $TG_Channel -M "Compression & Upoad Successfully Done at $(date '+%D - %H:%M:%S')
 
 Download the compressed multi-part .repo folder for $name with branch $branch
 [Sourceforge Download Links](buttonurl:$REL_URL)"
