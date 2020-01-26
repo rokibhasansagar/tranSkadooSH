@@ -38,10 +38,11 @@ cd tranSKadooSH
 
 datetime=$(date +%Y%m%d)
 
-# Current CI URL
-CI_URL=$CIRCLE_BUILD_URL
-# Release URL
-REL_URL=https://sourceforge.net/projects/transkadoosh/files/$name/$branch
+# Push Info into Bot's PM
+telegram -t $TG_BotToken -c $TG_Bot_PM -M "Repo Transloading Initialized 
+of $name for "$branch" Branch 
+at $(date '+%D - %H:%M:%S')
+[.](https://i.imgur.com/OpyoWU7.jpg)"
 
 google_cookies() {
   echo -en "\n" $CL_INS "Setup Google Cookies for Smooth googlesource Cloning" $CL_RST
@@ -80,22 +81,20 @@ repo_sync_shallow() {
   CPU_COUNT=$(grep -c ^processor /proc/cpuinfo)
   THREAD_COUNT_SYNC=$(($CPU_COUNT * 8))
   
-  telegram -t $TG_BotToken -c $TG_Channel -M "Hello tranSKadooSH-ers,
-I Bring You Great News of New Transload.
-
-Repo Sync Initialized for [$name]($manifest) for Branch $branch at $(date '+%D - %H:%M:%S')"
+  # Push Info into Bot's PM
+  telegram -t $TG_BotToken -c $TG_Bot_PM -M "Repo Sync Initialized at $(date '+%D - %H:%M:%S')"
 
   echo -e "\n" $CL_YLW "Syncing it up! Wait for a few minutes..." $CL_RST
   repo sync -c -q --force-sync --no-clone-bundle --optimized-fetch --prune --no-tags -j$THREAD_COUNT_SYNC
 
   echo -e "\n" $CL_MAG "SHALLOW Source Syncing done" $CL_RST
   
-  telegram -t $TG_BotToken -c $TG_Channel -M "Sync Completed Successfully at $(date '+%D - %H:%M:%S')
-
-Compression Started: [See Progress]($CI_URL)"
-
-  echo -e "\n" $CL_BLU "All Checked-out Folder/Files are Here -" $CL_RST
-  ls -la .
+  tree -l -L 2 --si -I ".git" > /tmp/checked-out_file_tree.txt
+  
+  # Push Info into Bot's PM
+  telegram -t $TG_BotToken -c $TG_Bot_PM -M "Sync Completed Successfully at $(date '+%D - %H:%M:%S')
+Checked-out File List is coming below - "
+  telegram -t $TG_BotToken -c $TG_Bot_PM -f "/tmp/checked-out_file_tree.txt"
 }
 
 move_repo() {
@@ -111,14 +110,21 @@ clean_checkout() {
 
 compress_shallow() {
   cd $DIR/transload/
+  
+  # Push Info into Bot's PM
+  telegram -t $TG_BotToken -c $TG_Bot_PM -M "Compression Started: [See Progress](buttonurl:$(echo $CIRCLE_BUILD_URL))"
+  
   echo -e "\n"  $CL_BLU"Source Compressing in parts, This will take some time" $CL_RST
   tar -cJf - .repo | split -b 1280M - ../$name/$branch/$name-$branch-repo-$datetime.tar.xz.
-
+  
+  # Push Info into Bot's PM
+  telegram -t $TG_BotToken -c $TG_Bot_PM -M "Compressing and Spliting into Parts Done at $(date '+%D - %H:%M:%S')"
+  
   cd $DIR/$name/$branch/
   echo -e "\n" $CL_PFX "Taking md5sums" $CL_RST
   md5sum * > $name-$branch-repo-$datetime.tar.xz.md5sum
   echo -e "\n" $CL_GRN "The Compressed Files are -" $CL_RST
-  du -sh *
+  ls -la .
 }
 
 release_payload() {
@@ -130,12 +136,24 @@ release_payload() {
 
   echo -e "\n" $CL_GRN "Done uploading" $CL_RST
   
-  telegram -t $TG_BotToken -c $TG_Channel -M "Compression & Upoad Successfully Done at $(date '+%D - %H:%M:%S')
+  # Push an image to great users, in a way
+  curl -sL https://i.imgur.com/v8DOuqut.gif --output /tmp/greet.gif
+  telegram -t $TG_BotToken -c $TG_Channel -i "/tmp/greet.gif"
+  # Push Info into tranSKadooSH Channel
+  telegram -t $TG_BotToken -c $TG_Channel -M "
+Hello Developers!
+Compressed Repo Sourcecode of $name for "$branch" Branch is available now!
+You can unpack and checkout files from that to begin ROM Building easily.
 
-Download the compressed multi-part .repo folder for $name with branch $branch
-[Sourceforge Download Links](buttonurl:$REL_URL)"
+Download the compressed multi-part .repo folder from [Sourceforge Server](https://sourceforge.net/projects/transkadoosh/files/$name/$branch)
 
-  echo -e "\n" $CL_BLU "Go to $REL_URL for the Files" $CL_RST
+Good Luck Building Custom Rom from $name."
+
+  echo -e "\n" $CL_BLU "Go to https://sourceforge.net/projects/transkadoosh/files/$name/$branch for the Files" $CL_RST
+  
+  # Push Info into Bot's PM
+  telegram -t $TG_BotToken -c $TG_Bot_PM -D -M "Multipart Compressed Repo Sourcecode for $name is Successfully Uploaded.
+Go to [Sourceforge Server](https://sourceforge.net/projects/transkadoosh/files/$name/$branch) to get the files."
 }
 
 clean_all() {
@@ -158,6 +176,8 @@ tranSKadooSH() {
 
 tranSKadooSH
 if [ $? -eq 0 ]; then
+  # Push Finishing Info into Bot's PM
+  telegram -t $TG_BotToken -c $TG_Bot_PM -M "Transload Successfully Done. Bye Bye!"
   clean_all
 else
   echo -e $CL_RED "Something Wrong" $CL_RST && exit 1
