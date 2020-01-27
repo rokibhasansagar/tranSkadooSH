@@ -25,12 +25,14 @@ That's all. 💖
 
 ---
 
-### My Uploads
-💝 _FRESH NEW SOURCES:_ https://sourceforge.net/projects/tranSKadooSH/files/
+## My Uploads
+💝 _FRESH NEW SOURCES: These Files are Continuously uploading into Server. Keep an eye on this.
 
-These Files are Continuously uploading into Server. Keep an eye on this.
+<a href="https://sourceforge.net/p/transkadoosh/"><img alt="Download tranSKadooSH" src="https://sourceforge.net/sflogo.php?type=17&group_id=3178722" width=200></a>
 
-👴 _Old Files. You May Download from Here:_ https://androidfilehost.com/?w=files&flid=270268
+
+### 👴 _Old Files:_
+https://androidfilehost.com/?w=files&flid=270268
 
 ---
 
@@ -63,7 +65,7 @@ If you do not want to use data at all, you can use below command, which will not
 
 Happy Coding! 🤗
 
-### Subscribe
+## Subscribe
 Join my Telegram Channel for Instant Update of All Old & New Uploaded ROM Sources at [@tranSKadooSH](https://t.me/tranSKadooSH)
 
 ---
