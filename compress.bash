@@ -21,7 +21,7 @@ manifest="https://github.com/DotOS/manifest.git"
 
 # Manifest branch.
 # Example: cm-14.0, nougat, Lineage-15.1
-branch="dot-n"
+branch="dot-o"
 
 ### Finally, execute the stuff. ###
 # Do Not Touch The Following Line
