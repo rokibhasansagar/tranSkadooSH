@@ -66,6 +66,7 @@ trim_darwin() {
   echo -e "\n" $CL_PFX "Removing Unimportant Darwin-specific Files from syncing" $CL_RST
   cd .repo/manifests
   sed -i '/darwin/d' default.xml
+  ( find . -type f -name '*.xml' | xargs sed -i '/darwin/d' ) || true
   git commit -a -m "Magic" || true
   cd ../
   sed -i '/darwin/d' manifest.xml
