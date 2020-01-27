@@ -13,15 +13,15 @@
 
 # Name of the ROM, (The Git Org Name) without any Spaces.
 # Example: CyanogenMod, SlimRoms, AOSP, ResurrectionRemix, TWRP
-name="DotOS"
+name="CesiumOS"
 
 # Manifest link. https:// is mandatory.
 # Example: https://github.com/cyanogenmod/android.git
-manifest="https://github.com/DotOS/manifest.git"
+manifest="https://github.com/CesiumOS/manifest.git"
 
 # Manifest branch.
 # Example: cm-14.0, nougat, Lineage-15.1
-branch="dot-o"
+branch="ten"
 
 ### Finally, execute the stuff. ###
 # Do Not Touch The Following Line
