@@ -142,7 +142,7 @@ release_payload() {
   telegram -t $TG_BotToken -c $TG_Channel -M "
 Hello Fellow Developers!
 
-The core `.repo` Folder of $name for "$branch" Branch, in Compressed `.tar.xz` format, is Available Now!
+The core .repo Folder of $name for "$branch" Branch, in Compressed .tar.xz format, is Available Now!
 You can unpack and checkout files from that to begin ROM Building easily.
 [.](https://i.imgur.com/v8DOuqu.gif)"
   # Push Links and Total Size Counts into Channel
@@ -150,7 +150,7 @@ You can unpack and checkout files from that to begin ROM Building easily.
 The total size of checked-out files will be $Checkout_Size.
 But you have to Download only about $Repo_Size of Data.
 
-Download the compressed multi-part `.repo` folder from [Sourceforge Server](https://sourceforge.net/projects/transkadoosh/files/$name/$branch)
+Download the compressed multi-part .repo folder from [Sourceforge Server](https://sourceforge.net/projects/transkadoosh/files/$name/$branch)
 
 Good Luck Building Custom Rom from $name.
 "
@@ -160,7 +160,7 @@ Good Luck Building Custom Rom from $name.
   # Push Info into Bot's PM
   telegram -t $TG_BotToken -c $TG_Bot_PM -D -M "Multipart Compressed Repo Sourcecode for $name is Successfully Uploaded.
 The total size of checked-out files will be $Checkout_Size.
-But the `.repo` folder has only about $Repo_Size of Data.
+But the .repo folder has only about $Repo_Size of Data.
 
 Go to [Sourceforge Server](https://sourceforge.net/projects/transkadoosh/files/$name/$branch) to get the files."
 }
