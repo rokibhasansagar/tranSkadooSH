@@ -13,15 +13,15 @@
 
 # Name of the ROM, (The Git Org Name) without any Spaces.
 # Example: CyanogenMod, SlimRoms, AOSP, ResurrectionRemix, TWRP
-name="AOKP"
+name="CarbonROM"
 
 # Manifest link. https:// is mandatory.
 # Example: https://github.com/cyanogenmod/android.git
-manifest="https://github.com/AOKP/platform_manifest.git"
+manifest="https://github.com/CarbonROM/android.git"
 
 # Manifest branch.
 # Example: cm-14.0, nougat, Lineage-15.1
-branch="oreo"
+branch="cr-4.0"
 
 ### Finally, execute the stuff. ###
 # Do Not Touch The Following Line
