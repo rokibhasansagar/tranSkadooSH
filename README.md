@@ -1,7 +1,7 @@
-![SourceForge](https://img.shields.io/sourceforge/dt/transkadoosh?label=All%20Time%20Downloads&style=for-the-badge)
+[![SourceForge](https://img.shields.io/sourceforge/dt/transkadoosh?label=All%20Time%20Downloads&style=for-the-badge&cacheSeconds=600)](#)
 
-![SourceForge](https://img.shields.io/sourceforge/dm/transkadoosh)
-![SourceForge](https://img.shields.io/sourceforge/dw/transkadoosh)
+[![SourceForge](https://img.shields.io/sourceforge/dm/transkadoosh?cacheSeconds=600)](#)
+[![SourceForge](https://img.shields.io/sourceforge/dw/transkadoosh?cacheSeconds=600)](#)
 
 # tranSkadooSH
 
@@ -40,13 +40,13 @@ Now, Only Marshmallow, Nougat & Oreo Branchs are Available for Download
 
 ROM Name   | Download Link for Individual ROM  | Download Counts
 :---------:|:---------------------------------:|:--------------------------:
-AOKP       | https://tinyurl.com/urtrc2f       | ![SourceForge](https://img.shields.io/sourceforge/dt/tranSKadooSH/AOKP)
-AOSP       | https://tinyurl.com/rbrtwtj       | ![SourceForge](https://img.shields.io/sourceforge/dt/tranSKadooSH/AOSP)
-CarbonROM  | https://tinyurl.com/sfkxes5       | ![SourceForge](https://img.shields.io/sourceforge/dt/tranSKadooSH/CarbonROM)
-CesiumOS   | https://tinyurl.com/wdsunwg       | ![SourceForge](https://img.shields.io/sourceforge/dt/tranSKadooSH/CesiumOS)
-DotOS      | https://tinyurl.com/ss5nxec       | ![SourceForge](https://img.shields.io/sourceforge/dt/tranSKadooSH/DotOS)
-ResurrectionRemix  | https://tinyurl.com/swbkqm3    | ![SourceForge](https://img.shields.io/sourceforge/dt/tranSKadooSH/ResurrectionRemix)
-SlimRoms   | https://tinyurl.com/wbauqdk       | ![SourceForge](https://img.shields.io/sourceforge/dt/tranSKadooSH/SlimRoms)
+AOKP       | https://tinyurl.com/urtrc2f       | [![SourceForge](https://img.shields.io/sourceforge/dt/tranSKadooSH/AOKP?cacheSeconds=600)](#)
+AOSP       | https://tinyurl.com/rbrtwtj       | [![SourceForge](https://img.shields.io/sourceforge/dt/tranSKadooSH/AOSP?cacheSeconds=600)](#)
+CarbonROM  | https://tinyurl.com/sfkxes5       | [![SourceForge](https://img.shields.io/sourceforge/dt/tranSKadooSH/CarbonROM?cacheSeconds=600)](#)
+CesiumOS   | https://tinyurl.com/wdsunwg       | [![SourceForge](https://img.shields.io/sourceforge/dt/tranSKadooSH/CesiumOS?cacheSeconds=600)](#)
+DotOS      | https://tinyurl.com/ss5nxec       | [![SourceForge](https://img.shields.io/sourceforge/dt/tranSKadooSH/DotOS?cacheSeconds=600)](#)
+ResurrectionRemix  | https://tinyurl.com/swbkqm3    | [![SourceForge](https://img.shields.io/sourceforge/dt/tranSKadooSH/ResurrectionRemix?cacheSeconds=600)](#)
+SlimRoms   | https://tinyurl.com/wbauqdk       | [![SourceForge](https://img.shields.io/sourceforge/dt/tranSKadooSH/SlimRoms?cacheSeconds=600)](#)
 
 
 ### 👴 _Old Files:_
