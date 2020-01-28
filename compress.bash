@@ -21,7 +21,7 @@ manifest="https://github.com/CarbonROM/android.git"
 
 # Manifest branch.
 # Example: cm-14.0, nougat, Lineage-15.1
-branch="cr-5.1"
+branch="cr-6.1"
 
 ### Finally, execute the stuff. ###
 # Do Not Touch The Following Line
