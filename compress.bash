@@ -21,7 +21,7 @@ manifest="https://github.com/AOKP/platform_manifest.git"
 
 # Manifest branch.
 # Example: cm-14.0, nougat, Lineage-15.1
-branch="mm"
+branch="nougat"
 
 ### Finally, execute the stuff. ###
 # Do Not Touch The Following Line
