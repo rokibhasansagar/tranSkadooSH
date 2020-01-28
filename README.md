@@ -1,5 +1,7 @@
-![SourceForge](https://img.shields.io/sourceforge/dm/transkadoosh?label=Download%20Count&style=for-the-badge)
-![SourceForge](https://img.shields.io/sourceforge/dt/transkadoosh?label=Total%20Downloads&style=for-the-badge)
+![SourceForge](https://img.shields.io/sourceforge/dt/transkadoosh?label=All%20Time%20Downloads&style=for-the-badge)
+
+![SourceForge](https://img.shields.io/sourceforge/dm/transkadoosh)
+![SourceForge](https://img.shields.io/sourceforge/dw/transkadoosh)
 
 # tranSkadooSH
 
@@ -7,7 +9,7 @@
 Reborn from [regalstreak's project skadoosh](http://forum.xda-developers.com/android/software/sources-android-sources-highly-t3231109) 😏
 
 ## How to add Pull Request:
-First, Look for your Desired Sources from the [__My Uploads__](#my-uploads) Section.
+First, Look for your Desired Sources from the [__Project Download Site__](#-project-download-site) Section.
 
 If you want me to add more sources and upload them for you, make sure you do the followings:
 
@@ -25,14 +27,30 @@ That's all. 💖
 
 ---
 
-## My Uploads
-💝 _FRESH NEW SOURCES: These Files are Continuously uploading into Server. Keep an eye on this.
+## 💝 _Project Download Site_
 
-<a href="https://sourceforge.net/p/transkadoosh/"><img alt="Download tranSKadooSH" src="https://sourceforge.net/sflogo.php?type=17&group_id=3178722" width=200></a>
+<a href="https://tinyurl.com/tranSKadooSH/"><img alt="Download tranSKadooSH" src="https://sourceforge.net/sflogo.php?type=17&group_id=3178722" width=200></a>
+
+These Files are Continuously uploading into Server. Keep an eye on this.
+
+---
+
+### _Individual Projects_
+Now, Only Marshmallow, Nougat & Oreo Branchs are Available for Download
+
+ROM Name   | Download Link for Individual ROM  | Download Counts
+:---------:|:---------------------------------:|:--------------------------:
+AOKP       | https://tinyurl.com/urtrc2f       | ![SourceForge](https://img.shields.io/sourceforge/dt/tranSKadooSH/AOKP)
+AOSP       | https://tinyurl.com/rbrtwtj       | ![SourceForge](https://img.shields.io/sourceforge/dt/tranSKadooSH/AOSP)
+CarbonROM  | https://tinyurl.com/sfkxes5       | ![SourceForge](https://img.shields.io/sourceforge/dt/tranSKadooSH/CarbonROM)
+CesiumOS   | https://tinyurl.com/wdsunwg       | ![SourceForge](https://img.shields.io/sourceforge/dt/tranSKadooSH/CesiumOS)
+DotOS      | https://tinyurl.com/ss5nxec       | ![SourceForge](https://img.shields.io/sourceforge/dt/tranSKadooSH/DotOS)
+ResurrectionRemix  | https://tinyurl.com/swbkqm3    | ![SourceForge](https://img.shields.io/sourceforge/dt/tranSKadooSH/ResurrectionRemix)
+SlimRoms   | https://tinyurl.com/wbauqdk       | ![SourceForge](https://img.shields.io/sourceforge/dt/tranSKadooSH/SlimRoms)
 
 
 ### 👴 _Old Files:_
-https://androidfilehost.com/?w=files&flid=270268
+_https://androidfilehost.com/?w=files&flid=270268_
 
 ---
 
@@ -70,7 +88,7 @@ Join my Telegram Channel for Instant Update of All Old & New Uploaded ROM Source
 
 ---
 
-🚧 This is still _Work in progress_ 🚧
+### 🚧 This is still _Work in progress_ 🚧
 
 And files are being Uploaded using free account from _CircleCI_.
 So, only a few variant of ROMs can be uploaded in a week.
