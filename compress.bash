@@ -21,7 +21,7 @@ manifest="https://github.com/LineageOS/android.git"
 
 # Manifest branch.
 # Example: cm-14.0, nougat, Lineage-15.1
-branch="cm-14.1"
+branch="lineage-15.1"
 
 ### Finally, execute the stuff. ###
 # Do Not Touch The Following Line
