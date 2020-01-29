@@ -13,15 +13,15 @@
 
 # Name of the ROM, (The Git Org Name) without any Spaces.
 # Example: CyanogenMod, SlimRoms, AOSP, ResurrectionRemix, TWRP
-name="AICP"
+name="CyanogenMod"
 
 # Manifest link. https:// is mandatory.
 # Example: https://github.com/cyanogenmod/android.git
-manifest="https://github.com/AICP/platform_manifest.git"
+manifest="https://github.com/CyanogenMod/android.git"
 
 # Manifest branch.
 # Example: cm-14.0, nougat, Lineage-15.1
-branch="o8.1"
+branch="cm-14.1"
 
 ### Finally, execute the stuff. ###
 # Do Not Touch The Following Line
