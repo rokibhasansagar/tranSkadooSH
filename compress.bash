@@ -21,7 +21,7 @@ manifest="https://github.com/crdroidandroid/android.git"
 
 # Manifest branch.
 # Example: cm-14.0, nougat, Lineage-15.1
-branch="8.1"
+branch="9.0"
 
 ### Finally, execute the stuff. ###
 # Do Not Touch The Following Line
