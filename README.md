@@ -27,6 +27,10 @@ That's all. 💖
 
 ---
 
+### 🖐 Warning ⛔
+All the repositories related to "darwin" is trimmed down.
+Meaning, these sources are not directly buildable in MacOS. If you use one, be sure to clone any darwin-related repository before build.
+
 ## 💝 _Project Download Site_
 
 <a href="https://tinyurl.com/tranSKadooSH/"><img alt="Download tranSKadooSH" src="https://sourceforge.net/sflogo.php?type=17&group_id=3178722" width=200></a>
