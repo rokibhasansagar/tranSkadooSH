@@ -21,7 +21,7 @@ manifest="https://github.com/DirtyUnicorns/android_manifest.git"
 
 # Manifest branch.
 # Example: cm-14.0, nougat, Lineage-15.1
-branch="n7x"
+branch="o8x"
 
 ### Finally, execute the stuff. ###
 # Do Not Touch The Following Line
