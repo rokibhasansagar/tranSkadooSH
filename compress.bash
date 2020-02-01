@@ -13,15 +13,15 @@
 
 # Name of the ROM, (The Git Org Name) without any Spaces.
 # Example: CyanogenMod, SlimRoms, AOSP, ResurrectionRemix, TWRP
-name="DirtyUnicorns"
+name="MoKee"
 
 # Manifest link. https:// is mandatory.
 # Example: https://github.com/cyanogenmod/android.git
-manifest="https://github.com/DirtyUnicorns/android_manifest.git"
+manifest="https://github.com/MoKee/android.git"
 
 # Manifest branch.
 # Example: cm-14.0, nougat, Lineage-15.1
-branch="p9x"
+branch="mkn-mr1"
 
 ### Finally, execute the stuff. ###
 # Do Not Touch The Following Line
