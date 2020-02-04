@@ -13,15 +13,15 @@
 
 # Name of the ROM, (The Git Org Name) without any Spaces.
 # Example: CyanogenMod, SlimRoms, AOSP, ResurrectionRemix, TWRP
-name="TeslaOS"
+name="TipsyOs"
 
 # Manifest link. https:// is mandatory.
 # Example: https://github.com/cyanogenmod/android.git
-manifest="https://github.com/Tesla-OS/manifest.git"
+manifest="https://github.com/TipsyOs/platform_manifest.git"
 
 # Manifest branch.
 # Example: cm-14.0, nougat, Lineage-15.1
-branch="8.1"
+branch="6.0"
 
 ### Finally, execute the stuff. ###
 # Do Not Touch The Following Line
