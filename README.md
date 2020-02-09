@@ -56,6 +56,9 @@ LineageOS  | https://tinyurl.com/taq329v     | [![SourceForge](https://img.shiel
 MoKee      | https://tinyurl.com/rh2qdur     | [![SourceForge](https://img.shields.io/sourceforge/dt/tranSKadooSH/MoKee?cacheSeconds=600)](#)
 ResurrectionRemix  | https://tinyurl.com/swbkqm3    | [![SourceForge](https://img.shields.io/sourceforge/dt/tranSKadooSH/ResurrectionRemix?cacheSeconds=600)](#)
 SlimRoms   | https://tinyurl.com/wbauqdk     | [![SourceForge](https://img.shields.io/sourceforge/dt/tranSKadooSH/SlimRoms?cacheSeconds=600)](#)
+TeslaRom-N | https://tinyurl.com/sbl52cv     | [![SourceForge](https://img.shields.io/sourceforge/dt/tranSKadooSH/TeslaRom?cacheSeconds=600)](#)
+TeslaOS (oreo) | https://tinyurl.com/ugkcyo7    | [![SourceForge](https://img.shields.io/sourceforge/dt/tranSKadooSH/TeslaOS?cacheSeconds=600)](#)
+TipsyOs    | https://tinyurl.com/vbyau3o     | [![SourceForge](https://img.shields.io/sourceforge/dt/tranSKadooSH/TipsyOs?cacheSeconds=600)](#)
 XenonHD    | https://tinyurl.com/u38w2v4     | [![SourceForge](https://img.shields.io/sourceforge/dt/tranSKadooSH/XenonHD?cacheSeconds=600)](#)
 
 
