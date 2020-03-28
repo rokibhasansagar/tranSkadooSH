@@ -13,11 +13,11 @@
 
 # Name of the ROM, (The Git Org Name) without any Spaces.
 # Example: CyanogenMod, SlimRoms, AOSP, ResurrectionRemix, TWRP
-name="TipsyOs"
+name="SKYHAWK-Recovery-Project"
 
 # Manifest link. https:// is mandatory.
 # Example: https://github.com/cyanogenmod/android.git
-manifest="https://github.com/TipsyOs/platform_manifest.git"
+manifest="https://github.com/SKYHAWK-Recovery-Project/platform_manifest_twrp_omni.git"
 
 # Manifest branch.
 # Example: cm-14.0, nougat, Lineage-15.1
