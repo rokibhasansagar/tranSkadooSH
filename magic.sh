@@ -79,14 +79,13 @@ repo_sync_shallow() {
 
   trim_darwin
 
-  CPU_COUNT=$(grep -c ^processor /proc/cpuinfo)
-  THREAD_COUNT_SYNC=$(($CPU_COUNT * 8))
-  
+  THREAD_COUNT=$(nproc --all)
+
   # Push Info into Bot's PM
   telegram -t $TG_BotToken -c $TG_Bot_PM -M "Repo Sync Initialized at $(date '+%D - %H:%M:%S')"
 
   echo -e "\n" $CL_YLW "Syncing it up! Wait for a few minutes..." $CL_RST
-  repo sync -c -q --force-sync --no-clone-bundle --optimized-fetch --prune --no-tags -j$THREAD_COUNT_SYNC
+  repo sync -c -q --force-sync --no-clone-bundle --optimized-fetch --prune --no-tags -j$THREAD_COUNT
 
   echo -e "\n" $CL_MAG "SHALLOW Source Syncing done" $CL_RST
   
