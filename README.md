@@ -1,7 +1,7 @@
-[![SourceForge](https://img.shields.io/sourceforge/dt/transkadoosh?label=All%20Time%20Downloads&style=for-the-badge&cacheSeconds=600)](#)
+[![SourceForge](https://img.shields.io/sourceforge/dt/transkadoosh?label=All%20Time%20Downloads&style=for-the-badge&cacheSeconds=3600)](#)
 
-[![SourceForge](https://img.shields.io/sourceforge/dm/transkadoosh?cacheSeconds=600)](#)
-[![SourceForge](https://img.shields.io/sourceforge/dw/transkadoosh?cacheSeconds=600)](#)
+[![SourceForge](https://img.shields.io/sourceforge/dm/transkadoosh?cacheSeconds=3600)](#)
+[![SourceForge](https://img.shields.io/sourceforge/dw/transkadoosh?cacheSeconds=3600)](#)
 
 # tranSkadooSH
 
@@ -44,22 +44,22 @@ Now, Only Marshmallow, Nougat & Oreo Branchs are Available for Download
 
 ROM Name   | Individual Source Download Link | Download Counts
 :---------:|:-------------------------------:|:--------------------------:
-AICP       | https://tinyurl.com/wewagpd     | [![SourceForge](https://img.shields.io/sourceforge/dt/tranSKadooSH/AICP?cacheSeconds=600)](#)
-AOKP       | https://tinyurl.com/urtrc2f     | [![SourceForge](https://img.shields.io/sourceforge/dt/tranSKadooSH/AOKP?cacheSeconds=600)](#)
-AOSP       | https://tinyurl.com/rbrtwtj     | [![SourceForge](https://img.shields.io/sourceforge/dt/tranSKadooSH/AOSP?cacheSeconds=600)](#)
-CarbonROM  | https://tinyurl.com/sfkxes5     | [![SourceForge](https://img.shields.io/sourceforge/dt/tranSKadooSH/CarbonROM?cacheSeconds=600)](#)
-CesiumOS   | https://tinyurl.com/wdsunwg     | [![SourceForge](https://img.shields.io/sourceforge/dt/tranSKadooSH/CesiumOS?cacheSeconds=600)](#)
-crDroid    | https://tinyurl.com/rbla8bm     | [![SourceForge](https://img.shields.io/sourceforge/dt/tranSKadooSH/crDroid?cacheSeconds=600)](#)
-DirtyUnicorns  | https://tinyurl.com/vpgr7fl    | [![SourceForge](https://img.shields.io/sourceforge/dt/tranSKadooSH/DirtyUnicorns?cacheSeconds=600)](#)
-DotOS      | https://tinyurl.com/ss5nxec     | [![SourceForge](https://img.shields.io/sourceforge/dt/tranSKadooSH/DotOS?cacheSeconds=600)](#)
-LineageOS  | https://tinyurl.com/taq329v     | [![SourceForge](https://img.shields.io/sourceforge/dt/tranSKadooSH/LineageOS?cacheSeconds=600)](#)
-MoKee      | https://tinyurl.com/rh2qdur     | [![SourceForge](https://img.shields.io/sourceforge/dt/tranSKadooSH/MoKee?cacheSeconds=600)](#)
-ResurrectionRemix  | https://tinyurl.com/swbkqm3    | [![SourceForge](https://img.shields.io/sourceforge/dt/tranSKadooSH/ResurrectionRemix?cacheSeconds=600)](#)
-SlimRoms   | https://tinyurl.com/wbauqdk     | [![SourceForge](https://img.shields.io/sourceforge/dt/tranSKadooSH/SlimRoms?cacheSeconds=600)](#)
-TeslaRom-N | https://tinyurl.com/sbl52cv     | [![SourceForge](https://img.shields.io/sourceforge/dt/tranSKadooSH/TeslaRom?cacheSeconds=600)](#)
-TeslaOS (oreo) | https://tinyurl.com/ugkcyo7    | [![SourceForge](https://img.shields.io/sourceforge/dt/tranSKadooSH/TeslaOS?cacheSeconds=600)](#)
-TipsyOs    | https://tinyurl.com/vbyau3o     | [![SourceForge](https://img.shields.io/sourceforge/dt/tranSKadooSH/TipsyOs?cacheSeconds=600)](#)
-XenonHD    | https://tinyurl.com/u38w2v4     | [![SourceForge](https://img.shields.io/sourceforge/dt/tranSKadooSH/XenonHD?cacheSeconds=600)](#)
+AICP       | https://tinyurl.com/wewagpd     | [![SourceForge](https://img.shields.io/sourceforge/dt/tranSKadooSH/AICP?cacheSeconds=3600)](#)
+AOKP       | https://tinyurl.com/urtrc2f     | [![SourceForge](https://img.shields.io/sourceforge/dt/tranSKadooSH/AOKP?cacheSeconds=3600)](#)
+AOSP       | https://tinyurl.com/rbrtwtj     | [![SourceForge](https://img.shields.io/sourceforge/dt/tranSKadooSH/AOSP?cacheSeconds=3600)](#)
+CarbonROM  | https://tinyurl.com/sfkxes5     | [![SourceForge](https://img.shields.io/sourceforge/dt/tranSKadooSH/CarbonROM?cacheSeconds=3600)](#)
+CesiumOS   | https://tinyurl.com/wdsunwg     | [![SourceForge](https://img.shields.io/sourceforge/dt/tranSKadooSH/CesiumOS?cacheSeconds=3600)](#)
+crDroid    | https://tinyurl.com/rbla8bm     | [![SourceForge](https://img.shields.io/sourceforge/dt/tranSKadooSH/crDroid?cacheSeconds=3600)](#)
+DirtyUnicorns  | https://tinyurl.com/vpgr7fl    | [![SourceForge](https://img.shields.io/sourceforge/dt/tranSKadooSH/DirtyUnicorns?cacheSeconds=3600)](#)
+DotOS      | https://tinyurl.com/ss5nxec     | [![SourceForge](https://img.shields.io/sourceforge/dt/tranSKadooSH/DotOS?cacheSeconds=3600)](#)
+LineageOS  | https://tinyurl.com/taq329v     | [![SourceForge](https://img.shields.io/sourceforge/dt/tranSKadooSH/LineageOS?cacheSeconds=3600)](#)
+MoKee      | https://tinyurl.com/rh2qdur     | [![SourceForge](https://img.shields.io/sourceforge/dt/tranSKadooSH/MoKee?cacheSeconds=3600)](#)
+ResurrectionRemix  | https://tinyurl.com/swbkqm3    | [![SourceForge](https://img.shields.io/sourceforge/dt/tranSKadooSH/ResurrectionRemix?cacheSeconds=3600)](#)
+SlimRoms   | https://tinyurl.com/wbauqdk     | [![SourceForge](https://img.shields.io/sourceforge/dt/tranSKadooSH/SlimRoms?cacheSeconds=3600)](#)
+TeslaRom-N | https://tinyurl.com/sbl52cv     | [![SourceForge](https://img.shields.io/sourceforge/dt/tranSKadooSH/TeslaRom?cacheSeconds=3600)](#)
+TeslaOS (oreo) | https://tinyurl.com/ugkcyo7    | [![SourceForge](https://img.shields.io/sourceforge/dt/tranSKadooSH/TeslaOS?cacheSeconds=3600)](#)
+TipsyOs    | https://tinyurl.com/vbyau3o     | [![SourceForge](https://img.shields.io/sourceforge/dt/tranSKadooSH/TipsyOs?cacheSeconds=3600)](#)
+XenonHD    | https://tinyurl.com/u38w2v4     | [![SourceForge](https://img.shields.io/sourceforge/dt/tranSKadooSH/XenonHD?cacheSeconds=3600)](#)
 
 
 ### 👴 _Old Files:_
