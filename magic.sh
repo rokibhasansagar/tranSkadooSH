@@ -1,4 +1,4 @@
-#!/usr/env bash
+#!/bin/bash
 
 # Original Authors of "skadoosh" ---
 # Neil "regalstreak" Agarwal,
