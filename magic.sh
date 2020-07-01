@@ -44,15 +44,15 @@ cd tranSKadooSH
 datetime=$(date +%Y%m%d)
 
 function TGInfo() {
-  python3 telegram.py --token $TG_BotToken --chat $TG_Bot_PM "${@}" \
+  python3 telegram.py --token $TG_BotToken --chat $TG_Bot_PM "${@}"
 }
 function TGPost() {
-  python3 telegram.py --token $TG_BotToken --chat $TG_Channel --file "${DIR}/panda.jpg" "${@}" \
+  python3 telegram.py --token $TG_BotToken --chat $TG_Channel --file "${DIR}/panda.jpg" "${@}"
 }
 
 # Push Info into Bot's PM
-${TGInfo} --file "${DIR}/panda.jpg" --caption "Repo Transloading Initialized 
-for $name with "$branch" Branch 
+TGInfo --file "${DIR}/panda.jpg" --caption "Repo Transloading Initialized 
+for $name with '$branch' Branch 
 at $(date '+%D - %H:%M:%S')"
 
 # Git Auth + Cookies
@@ -85,7 +85,7 @@ cd ../
 THREAD_COUNT=$(nproc --all)
 
 # Push Info into Bot's PM
-${TGInfo} --message "Repo Sync Initialized at $(date '+%D - %H:%M:%S')"
+TGInfo --message "Repo Sync Initialized at $(date '+%D - %H:%M:%S')"
 
 echo -e "\n" $CL_YLW "Syncing it up! Wait for a few minutes..." $CL_RST
 repo sync -c -q --force-sync --no-clone-bundle --optimized-fetch --prune --no-tags -j$THREAD_COUNT
@@ -95,7 +95,7 @@ echo -e "\n" $CL_MAG "SHALLOW Source Syncing done" $CL_RST
 tree -l -L 2 --si -I ".git" > /tmp/checked-out_file_tree.txt
   
 # Push Info into Bot's PM
-${TGInfo} --file "/tmp/checked-out_file_tree.txt" --caption "Sync Completed Successfully at $(date '+%D - %H:%M:%S')
+TGInfo --file "/tmp/checked-out_file_tree.txt" --caption "Sync Completed Successfully at $(date '+%D - %H:%M:%S')
 Checked-out File List is attached."
 
 # move_repo
@@ -113,13 +113,13 @@ rm -rf tranSKadooSH
 cd $DIR/transload/
   
 # Push Info into Bot's PM
-${TGInfo} --preview no --message "Compression of $Repo_Size Started: [See Progress]($CIRCLE_BUILD_URL)"
+TGInfo --preview no --message "Compression of $Repo_Size Started: [See Progress]($CIRCLE_BUILD_URL)"
   
 echo -e "\n"  $CL_BLU"Source Compressing in parts, This will take some time" $CL_RST
 tar -cJf - .repo | split -b 1280M - ../$name/$branch/$name-$branch-repo-$datetime.tar.xz.
   
 # Push Info into Bot's PM
-${TGInfo} --message "Compression into Multiple Parts are Done at $(date '+%D - %H:%M:%S')"
+TGInfo --message "Compression into Multiple Parts are Done at $(date '+%D - %H:%M:%S')"
   
 cd $DIR/$name/$branch/
 echo -e "\n" $CL_PFX "Taking md5sums" $CL_RST
@@ -137,10 +137,10 @@ rsync -arvPz --rsh="sshpass -p $SFPass ssh -l $SFUser" $name/ $SFUser@shell.sour
 echo -e "\n" $CL_GRN "Done uploading" $CL_RST
   
 # Push Info into tranSKadooSH Channel
-${TGPost} --caption "
+TGPost --caption "
 Hello Fellow Developers!
 
-The core .repo Folder of $name for "$branch" Branch, in Compressed .tar.xz format, is Available Now!
+The core .repo Folder of $name for '$branch' Branch, in Compressed .tar.xz format, is Available Now!
 You can unpack and checkout files from that to begin ROM Building easily.
 
 The total size of checked-out files will be $Checkout_Size.
@@ -154,7 +154,7 @@ Good Luck Building Custom Rom from $name.
 echo -e "\n" $CL_BLU "Go to https://sourceforge.net/projects/transkadoosh/files/$name/$branch for the Files" $CL_RST
   
 # Push Info into Bot's PM
-${TGInfo} --preview no --message "Multipart Compressed Repo Sourcecode for $name is Successfully Uploaded.
+TGInfo --preview no --message "Multipart Compressed Repo Sourcecode for $name is Successfully Uploaded.
 The total size of checked-out files will be $Checkout_Size.
 But the .repo folder has only about $Repo_Size of Data.
 
@@ -165,6 +165,6 @@ cd $DIR
 rm -rf transload $name
 
 # Push Finishing Info into Bot's PM
-${TGInfo} --message "Transload Successfully Done. Bye Bye!"
+TGInfo --message "Transload Successfully Done. Bye Bye!"
 
 echo -e "\n\n" $CL_BLU "All Process Done" $CL_RST "\n\n"
