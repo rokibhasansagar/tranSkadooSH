@@ -33,4 +33,4 @@ check_envs() {
 }
 
 check_envs
-./magic.sh $name $manifest $branch
+/bin/bash ./magic.sh $name $manifest $branch
