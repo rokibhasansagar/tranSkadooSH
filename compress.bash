@@ -13,15 +13,15 @@
 
 # Name of the ROM, (The Git Org Name) without any Spaces.
 # Example: CyanogenMod, SlimRoms, AOSP, ResurrectionRemix, TWRP
-name="SKYHAWK-Recovery-Project"
+name="AOSP"
 
 # Manifest link. https:// is mandatory.
 # Example: https://github.com/cyanogenmod/android.git
-manifest="https://github.com/SKYHAWK-Recovery-Project/platform_manifest_twrp_omni.git"
+manifest="https://android.googlesource.com/platform/manifest.git"
 
 # Manifest branch.
 # Example: cm-14.0, nougat, Lineage-15.1
-branch="9.0"
+branch="android-9.0.0_r47"
 
 ### Finally, execute the stuff. ###
 # Do Not Touch The Following Line
@@ -33,4 +33,4 @@ check_envs() {
 }
 
 check_envs
-/bin/bash ./magic.sh $name $manifest $branch
+./magic.sh $name $manifest $branch
