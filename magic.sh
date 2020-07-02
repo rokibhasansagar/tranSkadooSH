@@ -31,7 +31,7 @@ CL_RST="\033[0m"
 DIR=$(pwd)
 echo -en "\n" $CL_XOS "Current directory is - " && echo -e $DIR $CL_RST "\n"
 
-echo -e "\nTransloading for $name with $branch from $manifest\n"
+echo -e "\nTransloading for ${name} with ${branch} from ${manifest}\n"
 
 mkdir -p {tranSKadooSH,transload}
 mkdir -p $name/$branch
@@ -53,7 +53,7 @@ function TGPost() {
 
 # Push Info into Bot's PM
 TGInfo --photo "${Panda}" --caption "Repo Transloading Initialized 
-for $name with $branch Branch 
+for '"'${name}'"' with '"'${branch}'"' Branch 
 at $(date '+%D - %H:%M:%S')"
 
 # Git Auth + Cookies
@@ -114,7 +114,7 @@ rm -rf tranSKadooSH
 cd $DIR/transload/
   
 # Push Info into Bot's PM
-TGInfo --preview yes --message "Compression of $Repo_Size Started: [See Progress]($CIRCLE_BUILD_URL)"
+TGInfo --preview yes --message "Compression of $Repo_Size Started: [See Progress](${CIRCLE_BUILD_URL})"
   
 echo -e "\n"  $CL_BLU"Source Compressing in parts, This will take some time" $CL_RST
 tar -cJf - .repo | split -b 1280M - ../$name/$branch/$name-$branch-repo-$datetime.tar.xz.
@@ -141,13 +141,13 @@ echo -e "\n" $CL_GRN "Done uploading" $CL_RST
 TGPost --preview yes --caption "
 Hello Fellow Developers!
 
-The core .repo Folder of $name for '$branch' Branch, in Compressed .tar.xz format, is Available Now!
+The core .repo Folder of '"'${name}'"' for '"'${branch}'"' Branch, in Compressed .tar.xz format, is Available Now!
 You can unpack and checkout files from that to begin ROM Building easily.
 
 The total size of checked-out files will be $Checkout_Size.
 But you have to Download only about $Repo_Size of Data.
 
-Download the compressed multi-part .repo folder from [Sourceforge Server](https://sourceforge.net/projects/transkadoosh/files/$name/$branch)
+Download the compressed multi-part .repo folder from [Sourceforge Server](https://sourceforge.net/projects/transkadoosh/files/${name}/${branch})
 
 Good Luck Building Custom Rom from $name.
 "
@@ -155,11 +155,11 @@ Good Luck Building Custom Rom from $name.
 echo -e "\n" $CL_BLU "Go to https://sourceforge.net/projects/transkadoosh/files/$name/$branch for the Files" $CL_RST
   
 # Push Info into Bot's PM
-TGInfo --preview yes --message "Multipart Compressed Repo Sourcecode for $name is Successfully Uploaded.
+TGInfo --preview yes --message "Multipart Compressed Repo Sourcecode for ${name} is Successfully Uploaded.
 The total size of checked-out files will be $Checkout_Size.
 But the .repo folder has only about $Repo_Size of Data.
 
-Go to [Sourceforge Server](https://sourceforge.net/projects/transkadoosh/files/$name/$branch) to get the files."
+Go to [Sourceforge Server](https://sourceforge.net/projects/transkadoosh/files/${name}/${branch}) to get the files."
 
 # clean_all
 cd $DIR
