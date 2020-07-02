@@ -43,16 +43,17 @@ cd tranSKadooSH
 
 datetime=$(date +%Y%m%d)
 
+Panda=${DIR}/panda.jpg
 function TGInfo() {
-  python3 /usr/bin/telegram.py --token $TG_BotToken --chat $TG_Bot_PM "${@}"
+  telegram.py --token $TG_BotToken --chat $TG_Bot_PM "${@}"
 }
 function TGPost() {
-  python3 /usr/bin/telegram.py --token $TG_BotToken --chat $TG_Channel --photo "${DIR}/panda.jpg" "${@}"
+  telegram.py --token $TG_BotToken --chat $TG_Channel --photo "${Panda}" "${@}"
 }
 
 # Push Info into Bot's PM
-TGInfo --photo "${DIR}/panda.jpg" --caption "Repo Transloading Initialized 
-for $name with '$branch' Branch 
+TGInfo --photo "${Panda}" --caption "Repo Transloading Initialized 
+for $name with $branch Branch 
 at $(date '+%D - %H:%M:%S')"
 
 # Git Auth + Cookies
@@ -113,7 +114,7 @@ rm -rf tranSKadooSH
 cd $DIR/transload/
   
 # Push Info into Bot's PM
-TGInfo --preview no --message "Compression of $Repo_Size Started: [See Progress]($CIRCLE_BUILD_URL)"
+TGInfo --preview yes --message "Compression of $Repo_Size Started: [See Progress]($CIRCLE_BUILD_URL)"
   
 echo -e "\n"  $CL_BLU"Source Compressing in parts, This will take some time" $CL_RST
 tar -cJf - .repo | split -b 1280M - ../$name/$branch/$name-$branch-repo-$datetime.tar.xz.
@@ -137,7 +138,7 @@ rsync -arvPz --rsh="sshpass -p $SFPass ssh -l $SFUser" $name/ $SFUser@shell.sour
 echo -e "\n" $CL_GRN "Done uploading" $CL_RST
   
 # Push Info into tranSKadooSH Channel
-TGPost --caption "
+TGPost --preview yes --caption "
 Hello Fellow Developers!
 
 The core .repo Folder of $name for '$branch' Branch, in Compressed .tar.xz format, is Available Now!
@@ -154,7 +155,7 @@ Good Luck Building Custom Rom from $name.
 echo -e "\n" $CL_BLU "Go to https://sourceforge.net/projects/transkadoosh/files/$name/$branch for the Files" $CL_RST
   
 # Push Info into Bot's PM
-TGInfo --preview no --message "Multipart Compressed Repo Sourcecode for $name is Successfully Uploaded.
+TGInfo --preview yes --message "Multipart Compressed Repo Sourcecode for $name is Successfully Uploaded.
 The total size of checked-out files will be $Checkout_Size.
 But the .repo folder has only about $Repo_Size of Data.
 
