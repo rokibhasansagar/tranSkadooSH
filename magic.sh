@@ -47,11 +47,11 @@ function TGInfo() {
   python3 /usr/bin/telegram.py --token $TG_BotToken --chat $TG_Bot_PM "${@}"
 }
 function TGPost() {
-  python3 /usr/bin/telegram.py --token $TG_BotToken --chat $TG_Channel --file "${DIR}/panda.jpg" "${@}"
+  python3 /usr/bin/telegram.py --token $TG_BotToken --chat $TG_Channel --photo "${DIR}/panda.jpg" "${@}"
 }
 
 # Push Info into Bot's PM
-TGInfo --file "${DIR}/panda.jpg" --caption "Repo Transloading Initialized 
+TGInfo --photo "${DIR}/panda.jpg" --caption "Repo Transloading Initialized 
 for $name with '$branch' Branch 
 at $(date '+%D - %H:%M:%S')"
 
