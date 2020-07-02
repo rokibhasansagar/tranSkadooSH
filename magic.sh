@@ -44,10 +44,10 @@ cd tranSKadooSH
 datetime=$(date +%Y%m%d)
 
 function TGInfo() {
-  python3 telegram.py --token $TG_BotToken --chat $TG_Bot_PM "${@}"
+  python3 /usr/bin/telegram.py --token $TG_BotToken --chat $TG_Bot_PM "${@}"
 }
 function TGPost() {
-  python3 telegram.py --token $TG_BotToken --chat $TG_Channel --file "${DIR}/panda.jpg" "${@}"
+  python3 /usr/bin/telegram.py --token $TG_BotToken --chat $TG_Channel --file "${DIR}/panda.jpg" "${@}"
 }
 
 # Push Info into Bot's PM
