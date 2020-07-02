@@ -53,7 +53,7 @@ function TGPost() {
 
 # Push Info into Bot's PM
 TGInfo --photo "${Panda}" --caption "Repo Transloading Initialized 
-for '"'${name}'"' with '"'${branch}'"' Branch 
+for \"${name}\" with \"${branch}\" Branch 
 at $(date '+%D - %H:%M:%S')"
 
 # Git Auth + Cookies
@@ -141,7 +141,7 @@ echo -e "\n" $CL_GRN "Done uploading" $CL_RST
 TGPost --preview yes --caption "
 Hello Fellow Developers!
 
-The core .repo Folder of '"'${name}'"' for '"'${branch}'"' Branch, in Compressed .tar.xz format, is Available Now!
+The core .repo Folder of \"${name}\" for \"${branch}\" Branch, in Compressed .tar.xz format, is Available Now!
 You can unpack and checkout files from that to begin ROM Building easily.
 
 The total size of checked-out files will be $Checkout_Size.
@@ -152,7 +152,7 @@ Download the compressed multi-part .repo folder from [Sourceforge Server](https:
 Good Luck Building Custom Rom from $name.
 "
 
-echo -e "\n" $CL_BLU "Go to https://sourceforge.net/projects/transkadoosh/files/$name/$branch for the Files" $CL_RST
+echo -e "\n" $CL_BLU "Go to https://sourceforge.net/projects/transkadoosh/files/${name}/${branch} for the Files" $CL_RST
   
 # Push Info into Bot's PM
 TGInfo --preview yes --message "Multipart Compressed Repo Sourcecode for ${name} is Successfully Uploaded.
